@@ -208,6 +208,10 @@ Resources:
     Properties:
       RestApiId: !Ref RestApi
       StageName: prod
+    DependsOn:
+      - RestApiMethodGetItems
+      - RestApiMethodGetHello
+      - RestApiMethodPost
 
   LambdaApiPermission:
     Type: AWS::Lambda::Permission
